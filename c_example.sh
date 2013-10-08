@@ -1,12 +1,13 @@
 dim=2
 m=data/c.nii.gz 
 f=data/chalf.nii.gz
-its=[1200x1200x1200x0x10,0,5]
+its=[1200x1200x100x20x0,0,5]
 smth=8x6x4x2x1vox
-down=16x8x4x2x1
+down=8x6x4x2x1
 antsRegistration -d $dim  \
+                        -m demons[ $f,$m, 0.5, 0 ] \
                         -m meansquares[ $f,$m, 1, 0 ] \
-                        -t TimeVaryingVelocityField[ 1.0, 6, 1.0,0. , 0.1,0 ] \
+                        -t TimeVaryingVelocityField[ 2.0, 8, 1,0.0, 0.05,0 ] \
                         -c $its  \
                         -s $smth  \
                         -f $down \
