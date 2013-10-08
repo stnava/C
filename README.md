@@ -1,7 +1,9 @@
 C
 =
 
-a large deformation example
+This is an [ANTs]http://stnava.github.io/ANTs/ "ANTs") large deformation example.
+
+It uses the antsRegistration TimeVaryingVelocityField transformation.
 
 ![Full C](https://github.com/stnava/C/blob/master/figures/c.png?raw=true)
 
