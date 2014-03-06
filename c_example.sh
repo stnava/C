@@ -15,3 +15,5 @@ antsRegistration -d $dim  \
                        -o [output/ex_,output/ex_diff.nii.gz,output/ex_diff_inv.nii.gz] 
 CreateWarpedGridImage $dim output/ex_0InverseWarp.nii.gz output/grid.nii.gz 
 ConvertToJpg output/grid.nii.gz figures/grid.png 
+CreateJacobianDeterminantImage 2 output/ex_0Warp.nii.gz output/jac.nii.gz 0 1
+CreateJacobianDeterminantImage 2 output/ex_0InverseWarp.nii.gz output/jac_inv.nii.gz 0 1
